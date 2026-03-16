@@ -1,0 +1,574 @@
+[
+  {
+    "id": "SK_TEC_47460",
+    "name": "Capacidad para resolver problemas",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Ability handling problems",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47461",
+    "name": "Orientado a logros",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Achievement oriented",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47462",
+    "name": "Creación de herramientas de automatización para pruebas con VB, JAVA o PHP",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Creation of Automation Tools for Testing with VB, JAVA or PHP",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47463",
+    "name": "Colaborativo",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Collaborative",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47464",
+    "name": "Creativo en la búsqueda de errores",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Creative finding bugs",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47465",
+    "name": "Enfocado a resultados",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Driving for results",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47466",
+    "name": "Excelentes técnicas de inspección",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Excellent Inspection techniques",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47467",
+    "name": "Conocimiento de principios generales de QA",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Knowledge of General QA principles",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47468",
+    "name": "Organizado y disciplinado",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Organized and Disciplined",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47469",
+    "name": "Proactivo y comunicativo",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Proactive and communicative",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474610",
+    "name": "Disposición para trabajar en equipo",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Willingness to work as a team member",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474611",
+    "name": "Pruebas para aplicaciones móviles",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Testing for Mobile Applications",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474612",
+    "name": "Mejora continua de procesos y procedimientos internos",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Always looking for improvement internal procedures and process",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474613",
+    "name": "Disposición para aprender nuevas tecnologías",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Willingness to learn new technologies",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474614",
+    "name": "Experiencia en Pixel Perfect",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Pixel Perfect Experience",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474615",
+    "name": "Programación de páginas web (CSS, JavaScript, HTML5)",
+    "category": "Habilidades Profesionales",
+    "translations": {
+      "en": {
+        "name": "Web Pages Programing (CSS, JavaScript, HTML5)",
+        "category": "Technical Skills"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47460",
+    "name": "JavaScript, NodeJS",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "JavaScript, NodeJS",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47461",
+    "name": "Programación en Android Studio",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Programing on Android Studio",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47462",
+    "name": "jQuery (Básico)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "jQuery (Basics)",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47463",
+    "name": "C# (Básico)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "C# (Basics)",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47464",
+    "name": "CSS 2.0 | CSS3",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "CSS 2.0 | CSS3",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47465",
+    "name": "Java",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Java",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47466",
+    "name": "Slack",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Slack",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47467",
+    "name": "Automatización con Selenium y JAVA",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Selenium Automation with JAVA",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47468",
+    "name": "Cypress.io",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Cypress.io",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_47469",
+    "name": "Lenguajes de Marcado: HTML 4.0 | XHTML | HTML5 | XML",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Markup Languages: HTML 4.0| XHTML| HTML5|XML",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474610",
+    "name": "Microsoft Office",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Microsoft Office",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474611",
+    "name": "Bases de Datos: MySQL, PostgreSQL",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Database: MySQL, PostgreSQL",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474612",
+    "name": "PHP: Code Igniter HMVC",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "PHP: Code Igniter HMVC",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474613",
+    "name": "Visual Basic para Aplicaciones Microsoft (Macros Excel, Access)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Visual Basic for Microsoft Applications (Macros Excel. Access)",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474614",
+    "name": "Programación Orientada a Objetos (VB, JAVA, PHP, C#)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Programming Oriented Objects (VB, JAVA, PHP, C#)",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474615",
+    "name": "Media queries (Diseño Responsivo)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Media queries (Responsive Design)",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474616",
+    "name": "Banners Double Click HTML5 y validación FLASH",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Double Click Banners HTML5 and FLASH validation",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474617",
+    "name": "Firebase (Google)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Firebase (Google)",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474618",
+    "name": "Programación en React (10 meses)",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "React Programing 10 months.",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_TEC_474619",
+    "name": "GitHub",
+    "category": "Conocimientos Técnicos",
+    "translations": {
+      "en": {
+        "name": "Git Hub",
+        "category": "Technical Knowledge"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47460",
+    "name": "Adobe Dreamweaver",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Adobe Dreamweaver",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47461",
+    "name": "Sublime Text",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Sublime Text",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47462",
+    "name": "Wamp (SQL, Tomcat y PHP)",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Wamp (SQL, Tomcat and PHP)",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47463",
+    "name": "Microsoft Office",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Microsoft Office",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47464",
+    "name": "Microsoft Visio",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Microsoft Visio",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47465",
+    "name": "Jenkins",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Jenkins",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47466",
+    "name": "Linux (Básico)",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Linux (Basic)",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47467",
+    "name": "Eclipse, Visual Studio Code",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Eclipse, Visual Studio Code",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47468",
+    "name": "IntelliJ IDE",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "IntelliJ IDE",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_47469",
+    "name": "MySQL Workbench",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "MySQL Workbench",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_474610",
+    "name": "Charles Tracking Tool",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Charles Tracking Tool",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_474611",
+    "name": "Screen Hunter",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Screen Hunter",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_474612",
+    "name": "Win Merge",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Win Merge",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_474613",
+    "name": "Dunk Link Capture Software",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "Dunk Link Capture Software",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_474614",
+    "name": "JIRA Bug Tracking Tool",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "JIRA Bug Tracking Tool",
+        "category": "Software & Tools"
+      }
+    }
+  },
+  {
+    "id": "SK_SOF_474615",
+    "name": "JMeter",
+    "category": "Software & Herramientas",
+    "translations": {
+      "en": {
+        "name": "JMeter",
+        "category": "Software & Tools"
+      }
+    }
+  }
+]

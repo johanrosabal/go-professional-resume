@@ -1,0 +1,44 @@
+type User @table {
+  email: String!
+  createdAt: Timestamp!
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  professionalSummary: String
+}
+
+type Resume @table {
+  user: User!
+  name: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  templateChosen: String
+  publicShareLink: String
+}
+
+type Experience @table {
+  resume: Resume!
+  jobTitle: String!
+  company: String!
+  startDate: Date!
+  endDate: Date
+  responsibilities: String
+  isCurrentJob: Boolean
+}
+
+type Education @table {
+  resume: Resume!
+  degree: String!
+  institution: String!
+  startDate: Date!
+  endDate: Date
+  gpa: Float
+  major: String
+  minor: String
+}
+
+type Skill @table {
+  resume: Resume!
+  name: String!
+  proficiencyLevel: String
+}
