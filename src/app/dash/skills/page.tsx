@@ -109,7 +109,8 @@ export default function SkillsPage() {
         es: {
             title: "Habilidades & Tecnologías",
             desc: "Gestiona tu stack tecnológico y habilidades profesionales por categorías.",
-            save: "Sincronizar Datos",
+            save: "Guardar Cambios",
+            cancel: "Cancelar",
             saving: "Guardando...",
             add: "Añadir Habilidad",
             name: "Nombre del Skill",
@@ -126,7 +127,8 @@ export default function SkillsPage() {
         en: {
             title: "Skills & Tech Stack",
             desc: "Manage your technology stack and professional tools by categories.",
-            save: "Sync Matrix",
+            save: "Save Changes",
+            cancel: "Cancel",
             saving: "Saving...",
             add: "Add Skill",
             name: "Skill Name",
@@ -157,6 +159,35 @@ export default function SkillsPage() {
 
     const handleRemove = (id: string) => {
         setLocalSkills(localSkills.filter(s => s.id !== id));
+    };
+
+    const handleCancel = () => {
+        if (!userData || !userData.skills) {
+            setLocalSkills([]);
+            return;
+        }
+
+        const mapped = userData.skills.map((skill: any) => {
+            if (editingLanguage === "es") {
+                return {
+                    ...skill,
+                    name: skill.name || "",
+                    category: skill.category || "",
+                    level: skill.level || 3,
+                    isActive: skill.isActive !== false
+                };
+            } else {
+                return {
+                    ...skill,
+                    name: skill.translations?.en?.name || skill.name || "",
+                    category: skill.translations?.en?.category || skill.category || "",
+                    level: skill.level || 3,
+                    isActive: skill.isActive !== false
+                };
+            }
+        });
+        setLocalSkills(mapped);
+        toast.success(editingLanguage === 'es' ? "Cambios revertidos" : "Changes reset");
     };
 
     const handleChange = (id: string, field: keyof Skill, value: any) => {
@@ -204,26 +235,29 @@ export default function SkillsPage() {
 
             const updatedSkills = localSkills.map(ls => {
                 const existing = finalSkills.find((e: any) => e.id === ls.id) || { id: ls.id };
+                const translations = ls.translations || existing.translations;
 
                 if (editingLanguage === "es") {
-                    return {
+                    const result: any = {
                         ...existing,
                         ...ls,
-                        translations: ls.translations || existing.translations // Preserve translations if selecting master skill
                     };
+                    if (translations) result.translations = translations;
+                    return result;
                 } else {
-                    return {
+                    const result: any = {
                         ...existing,
                         level: ls.level,
                         isActive: ls.isActive,
                         translations: {
-                            ...existing.translations,
+                            ...(existing?.translations || {}),
                             en: {
                                 name: ls.name,
                                 category: ls.category
                             }
                         }
                     };
+                    return result;
                 }
             });
 
@@ -265,9 +299,18 @@ export default function SkillsPage() {
                     </h1>
                     <p className="text-sci-metallic mt-1 font-mono text-sm uppercase tracking-wider">{text.desc}</p>
                 </div>
-                <GlowingButton onClick={handleSave} disabled={saving} className="min-w-[180px]">
-                    {saving ? text.saving : text.save}
-                </GlowingButton>
+                <div className="flex gap-3">
+                    <button
+                        onClick={handleCancel}
+                        disabled={saving}
+                        className="px-6 py-2 rounded-md text-sm font-mono uppercase tracking-widest text-sci-metallic hover:text-white transition-all border border-sci-border/50 hover:border-sci-accent/50"
+                    >
+                        {text.cancel}
+                    </button>
+                    <GlowingButton onClick={handleSave} disabled={saving} className="min-w-[180px]">
+                        {saving ? text.saving : text.save}
+                    </GlowingButton>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -409,6 +452,19 @@ export default function SkillsPage() {
                         </div>
                         <span className="font-mono text-sm tracking-widest uppercase mt-2">{text.add}</span>
                     </button>
+
+                    <div className="flex flex-col md:flex-row justify-end gap-3 pt-6 border-t border-sci-border/30">
+                        <button
+                            onClick={handleCancel}
+                            disabled={saving}
+                            className="px-8 py-3 rounded-md text-sm font-mono uppercase tracking-[0.2em] text-sci-metallic hover:text-white transition-all border border-sci-border/50 hover:border-sci-accent/50 bg-black/20"
+                        >
+                            {text.cancel}
+                        </button>
+                        <GlowingButton onClick={handleSave} disabled={saving} size="lg" className="min-w-[220px] font-bold tracking-[0.2em]">
+                            {saving ? text.saving : text.save}
+                        </GlowingButton>
+                    </div>
                 </div>
             </div>
         </div>

@@ -15,6 +15,7 @@ import { useDashboard } from "@/lib/DashboardContext";
 import { ref, uploadBytes, getDownloadURL, deleteObject } from "firebase/storage";
 import { storage } from "@/lib/firebase";
 import { Camera, Loader2 } from "lucide-react";
+import { DocumentsSection } from "@/components/dashboard/DocumentsSection";
 
 const RichTextEditor = dynamic(() => import("@/components/ui/RichTextEditor"), {
     ssr: false,
@@ -567,6 +568,11 @@ export default function DashboardPage() {
                     </div>
                 </form>
             </SciFiCard>
+
+            <DocumentsSection 
+                uid={user.uid} 
+                initialDocuments={userData?.documents} 
+            />
         </div>
     );
 }

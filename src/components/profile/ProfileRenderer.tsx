@@ -2,9 +2,8 @@
 
 import { useRef, useEffect, useState } from "react";
 import { SciFiCard } from "@/components/ui/SciFiCard";
-import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 import { ResumePrintLayout } from "@/components/profile/ResumePrintLayout";
-import { Github, Linkedin, Mail, MapPin, Terminal, Phone, MessageCircle, Calendar, Flag, BookOpen, Users, Globe, ChevronDown, Download } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Terminal, Phone, MessageCircle, Calendar, Flag, BookOpen, Users, Globe, ChevronDown, Download, Code, Box, Wrench, Cpu, Zap, Layers } from "lucide-react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 
 function EducationCard({ edu, text }: { edu: any, text: any }) {
@@ -89,6 +88,34 @@ export function ProfileRenderer({ profileData }: { profileData: any }) {
             relationship: loc(ref, 'relationship'),
         }));
 
+    const skills = (profileData.skills || [])
+        .filter((s: any) => s.isActive !== false)
+        .map((s: any) => ({
+            ...s,
+            name: loc(s, 'name'),
+            category: loc(s, 'category'),
+        }));
+
+    // Group skills by category
+    const groupedSkills = skills.reduce((acc: any, skill: any) => {
+        const cat = skill.category || "General";
+        if (!acc[cat]) acc[cat] = [];
+        acc[cat].push(skill);
+        return acc;
+    }, {});
+
+    const SKILL_ICONS: Record<string, any> = {
+        "Conocimientos Técnicos": Code,
+        "Technical Knowledge": Code,
+        "Habilidades Profesionales": Users,
+        "Technical Skills": Users,
+        "Software & Herramientas": Box,
+        "Software & Tools": Box,
+        "Idiomas": Globe,
+        "Languages": Globe,
+        "default": Wrench
+    };
+
     const labels = {
         es: {
             status: "Sys_Status: Activo",
@@ -98,7 +125,10 @@ export function ProfileRenderer({ profileData }: { profileData: any }) {
             noExp: "No hay registros de experiencia detectados en el sistema.",
             edu: "Formación_Académica",
             ref: "Nodos_Referencia",
-            in: "en"
+            in: "en",
+            skills: "Matriz_Habilidades",
+            nodes: "NODOS",
+            levelDesc: ["Novato", "Aprendiz", "Intermedio", "Avanzado", "Experto"]
         },
         en: {
             status: "Sys_Status: Active",
@@ -108,7 +138,10 @@ export function ProfileRenderer({ profileData }: { profileData: any }) {
             noExp: "No experience records detected in the system.",
             edu: "Academic_Training",
             ref: "Reference_Nodes",
-            in: "at"
+            in: "at",
+            skills: "Skills_Matrix",
+            nodes: "NODES",
+            levelDesc: ["Novice", "Apprentice", "Intermediate", "Advanced", "Expert"]
         }
     };
 
@@ -116,7 +149,7 @@ export function ProfileRenderer({ profileData }: { profileData: any }) {
 
     return (
         <div className="min-h-screen print:min-h-0 relative overflow-x-hidden print:overflow-visible bg-sci-dark print:bg-white text-white print:text-gray-900 font-sans">
-            <AnimatedBackground />
+
 
             {/* Top Right Controls */}
             <div className="fixed top-4 right-4 z-50 flex items-center gap-3 print:hidden">
@@ -183,9 +216,9 @@ export function ProfileRenderer({ profileData }: { profileData: any }) {
 
                     <div className="flex flex-col md:flex-row print:flex-row gap-8 items-start md:items-center print:items-center">
                         <div className="h-40 w-40 md:h-48 md:w-48 print:h-32 print:w-32 shrink-0 relative flex items-center justify-center group">
-                            {/* Animated Sci-Fi Rings Layer */}
-                            <div className="absolute inset-0 rounded-full border border-sci-accent/30 bg-sci-accent/5 animate-[spin_10s_linear_infinite] print:hidden" />
-                            <div className="absolute inset-2 rounded-full border border-dashed border-sci-accent/50 animate-[spin_15s_linear_infinite_reverse] print:hidden" />
+                            {/* Sci-Fi Rings Layer (Static) */}
+                            <div className="absolute inset-0 rounded-full border border-sci-accent/30 bg-sci-accent/5 print:hidden" />
+                            <div className="absolute inset-2 rounded-full border border-dashed border-sci-accent/50 print:hidden" />
                             <div className="absolute inset-[-10px] rounded-full border border-sci-accent/10 scale-95 opacity-0 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700 print:hidden" />
 
                             {/* Inner Picture Container */}
@@ -297,6 +330,65 @@ export function ProfileRenderer({ profileData }: { profileData: any }) {
                         )}
                     </div>
                 </section>
+
+                {/* Skills Section */}
+                {skills.length > 0 && (
+                    <section className="mt-20">
+                        <h3 className="flex items-center gap-2 text-lg font-mono text-sci-accent mb-8 uppercase tracking-widest">
+                            <Cpu className="h-5 w-5" />
+                            {text.skills}
+                        </h3>
+
+                        <div className="space-y-10">
+                            {Object.entries(groupedSkills).map(([category, catSkills]: [string, any]) => {
+                                const Icon = SKILL_ICONS[category] || SKILL_ICONS.default;
+                                return (
+                                    <div key={category} className="space-y-6">
+                                        <div className="flex items-center gap-3 border-l-2 border-sci-accent/50 pl-4">
+                                            <Icon className="h-4 w-4 text-sci-accent" />
+                                            <h4 className="text-sm font-mono text-sci-metallic uppercase tracking-[0.2em]">
+                                                {category}
+                                            </h4>
+                                            <span className="text-[10px] font-mono text-sci-accent/50 ml-auto">
+                                                {catSkills.length} {text.nodes}
+                                            </span>
+                                        </div>
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                            {catSkills.map((skill: any) => (
+                                                <SciFiCard key={skill.id} glowOnHover className="p-4 bg-sci-dark/40 border-sci-border/30 group">
+                                                    <div className="flex justify-between items-start mb-3">
+                                                        <span className="text-sm font-bold text-white group-hover:text-sci-accent transition-colors">
+                                                            {skill.name}
+                                                        </span>
+                                                        <Zap className="h-3 w-3 text-sci-accent/30 group-hover:text-sci-accent transition-all" />
+                                                    </div>
+                                                    
+                                                    <div className="flex gap-1 items-center">
+                                                        {[1, 2, 3, 4, 5].map((lvl) => (
+                                                            <div 
+                                                                key={lvl}
+                                                                className={`h-1 flex-1 rounded-full transition-all duration-500 ${
+                                                                    lvl <= skill.level 
+                                                                    ? "bg-sci-accent shadow-[0_0_8px_rgba(0,240,255,0.4)]" 
+                                                                    : "bg-sci-border/20"
+                                                                }`}
+                                                            />
+                                                        ))}
+                                                        <span className="ml-2 text-[10px] font-mono text-sci-metallic uppercase whitespace-nowrap">
+                                                            {text.levelDesc[skill.level - 1]}
+                                                        </span>
+                                                    </div>
+                                                </SciFiCard>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </section>
+                )}
+
 
                 {/* Education Timeline */}
                 {education.length > 0 && (
